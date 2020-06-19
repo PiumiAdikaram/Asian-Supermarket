@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Salary Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css3/login.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" href="#">A9 Supermarket</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button> 
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+		<ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="availability.html"><i class="fa fas fa-cart-arrow-down"></i> products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="admins.html"><i class="fa far fa-id-badge"></i> Employees</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html"><i class="fa far fa-id"></i> Calculate Salary</a>
+                    </li>
+                    <li class="nav-item dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><% out.println(request.getParameter("f_name")); %></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="logout.jsp" style="color:black;"><i class="fa fa-sign-out"></i> LogOut</a>
+                            </div>
+                    </li>
+		</ul>
+            </div>
+	</nav>
+     <div>
+         <pre style="height:80px">
+             <h1> Salary Calculation </h1>
+         </pre>
+       
+     </div>
+        <div class="row">
+       <div class="col-sm-12">
+           
+           <form action="calculation.jsp" method="POST">
+		<fieldset>
+		<pre>
+                         Employee Details
+                Employee Email  :    	<input type="text" name="email"><br>
+
+                </pre>
+                </fieldset>
+
+        <div class="col-sm-6">
+            <fieldset>
+		<pre>
+                         Gross Salary 
+	Basic Salary(Rs)	:<input type="text" name="basic_Salary">
+
+	OT Hours                :<input type="text" name="ot_Hours"> 
+                           	</pre>
+            </fieldset>
+       
+	</div>
+	<div class="col-sm-6">
+         <fieldset>
+		<pre>
+                         Deductions 
+
+		Loan(Rs)		:<input type="text" name="loan"> 
+                     
+		</pre>
+		</fieldset>       
+        </div>
+		
+	<div class="col-sm-12">
+            <fieldset>	
+                        <pre>
+                        <input type="submit" value="Calculate All" class="btn btn-success">                             <input type="reset" value="Clear"  class="btn btn-danger">
+                        </pre>
+                    </fieldset>
+                </div>
+                </form>
+             </div>
+    </div>   
+    </body>
+</html>

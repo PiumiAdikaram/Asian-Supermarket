@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Delete Product</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/product.css">
+    </head>
+    <body>
+        
+            
+        
+         <div id="header">
+            </div> 
+        
+                <div id="logo">
+                    <a href="index.html"><span>Super Market</span></a>
+               </div>
+                <ul id="navigation">
+                   
+                    <li>
+                        <a href="AddProduct.html">Add Product</a>
+                    </li>
+                    <li class="selected">
+                        <a href="DeleteProduct.html">Delete Product</a>
+                    </li>				
+                    <li>
+                        <a href="UpdateProduct.html">Update Product</a>
+                    </li>
+                    <li>
+                        <a href="availability.html">Available Product</a>
+                    </li>
+                </ul>
+           
+              
+        <div id="contents">
+            
+        <div class="loginbox">
+            
+            <form name="formProduct" action="productDelete.jsp">
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td>Product Id:</td>
+                            <td><input type="text" name="product_Id" value="" /></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+                <input type="submit" value="Delete" name="Delete" />
+                <div class="btn">
+                <input type="reset" value="Clear" name="Clear" />
+                </div>
+            </form>
+          
+        </div>
+          </div>
+        <div id="footer">
+            <div>
+                <p>
+                    © Copyright - 2018. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
